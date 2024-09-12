@@ -23,14 +23,15 @@ Este proyecto se ha desarrollado en equipo y está dividido en diferentes seccio
 📂 Estructura de Carpetas
 
 root/
-----home/
----- cursos-clases/
----- alumnos/
----- blog-foro-trucos/
-----assets/
-   	----css/
-    	----js/
-    	----images/   
+├── home/
+├── cursos-clases/
+├── alumnos/
+├── blog-foro-trucos/
+└── assets/
+    ├── css/
+    ├── js/
+    └── images/
+
 
     
 🛠️ Tecnologías Utilizadas
