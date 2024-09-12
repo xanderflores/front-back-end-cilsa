@@ -30,13 +30,25 @@ Este proyecto se ha desarrollado en equipo y está dividido en diferentes seccio
 
 # root/
 # ├── home/
+      ├── css/
+      ├── js/
+      └── images/
 # ├── cursos-clases/
+      ├── css/
+      ├── js/
+      └── images/
 # ├── alumnos/
+      ├── css/
+      ├── js/
+      └── images/
 # ├── blog-foro-trucos/
+      ├── css/
+      ├── js/
+      └── images/
 # └── assets/
-#    ├── css/
-#    ├── js/
-#    └── images/
+        ├── css/
+        ├── js/
+        └── images/
 
 
     
