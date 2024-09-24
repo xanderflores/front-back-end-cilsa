@@ -1,6 +1,12 @@
+
+Documentacion de React [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ [React documentation](https://reactjs.org/).
 # Front-End-Cilsa
 # Instalación
   # 1 - Clona este repositorio
+    ### Usar 'npm install´ para instalar las dependencias de react
+    ### Recomiendo usar el comando para levantar el proyecto `npm start` de react
+
  
   # 2 - Entra al directorio de la aplicación
 
@@ -56,3 +62,4 @@ Este proyecto se ha desarrollado en equipo y está dividido en diferentes seccio
 HTML, CSS, JavaScript
 Frameworks y bibliotecas adicionales (por especificar)
 GitHub para control de versiones y colaboración
+>>>>>>> main
