@@ -32,7 +32,7 @@ function Navigation() {
 
                   <Nav.Link
                     className="navItemsText"
-                    href="/CursosClasesP"
+                    href="/"
                     style={{ color: "white" }}
                   >
                     HOME
