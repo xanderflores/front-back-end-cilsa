@@ -1,0 +1,15 @@
+@use './styles/abstract/colors' as *;
+.App {
+   
+    .bottom_co {
+        font-size: 13px;
+        background-color: $dark-level5;
+        color: white;
+    }
+
+    .my_links {
+        font-size: 13px;
+        color: white;
+        font-weight: 700;
+    }
+}
