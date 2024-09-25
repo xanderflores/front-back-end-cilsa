@@ -1,3 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 .App .bottom_co {
   font-size: 13px;
   background-color: #323232;

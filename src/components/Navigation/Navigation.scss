@@ -1,19 +1,26 @@
 @use "../../styles/abstract/colors" as *;
 @use "../../styles/abstract/base_styles" as *;
 @import "../../responsive/mixin";
+:root {
+  --primary-color: #0b9bb4c7;
+  --secondary-color: #1eab67; /* Puedes agregar más colores aquí */
+}
+
+
+
 .navbar {
-  height: 70px;
+  height: 13vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
   max-width: 100%;
   position: fixed;
+  top: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  max-width: 100%;
   position: fixed;
   background-color: #0b9bb4c7;
   

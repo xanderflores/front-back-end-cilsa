@@ -6,16 +6,14 @@ import logo from "../../assets/Principal/logo.jpg";
 
 function Principal() {
   return (
-    <div className="contenedor" style={{ height: "100%", overflow: "none" }}>
-      <Container fluid className="contenedor">
-        <h1 className="titulo">Max web developer</h1>
-        <img src={logo} alt="Logo" />
-        <h3>Ingeniero en sistemas</h3>
-        <h3>Profesor de Full stack developer</h3>
-        <nav>
-          <a href="#">www.Maxflores.com</a>
-        </nav>
-      </Container>
+    <div className="contenedor" style={{ height: "74vh", overflow: "none" }}>
+      <h1 className="titulo">Max web developer</h1>
+      <img src={logo} alt="Logo" />
+      <h3>Ingeniero en sistemas</h3>
+      <h3>Profesor de Full stack developer</h3>
+      <nav>
+        <a href="#">www.Maxflores.com</a>
+      </nav>
     </div>
   );
 }

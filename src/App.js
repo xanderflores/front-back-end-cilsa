@@ -6,6 +6,7 @@ import CursosClasesP from './pages/CursosClasesP/CursosClasesP';
 import BlogForo from './pages/BlogForo/BlogForo';
 import Alumnos from './pages/Alumnos/Alumnos';
 import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/BlogForo" element={<BlogForo/>} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }
