@@ -78,7 +78,7 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
 }
 @media (max-width: 62.5em) {
   .navbar {
-    height: 95px;
+    height: 13vh;
   }
   .navbar .container {
     display: flex !important;
@@ -88,7 +88,7 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
     margin: 0;
   }
   .navbar .container .navbar-collapse {
-    background-color: #CCFFC4;
+    background-color: var(--primary-color);
   }
   .navbar .brand-logo {
     display: none;
