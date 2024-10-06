@@ -1,12 +1,11 @@
 import "./Principal.css";
 import React from "react";
-import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import logo from "../../assets/Principal/logo.jpg";
 
 function Principal() {
   return (
-    <div className="contenedor" style={{ height: "74vh", overflow: "none" }}>
+    <div className="contenedor" style={{  overflow: "none" }}>
       <h1 className="titulo">Max web developer</h1>
       <img src={logo} alt="Logo" />
       <h3>Ingeniero en sistemas</h3>
