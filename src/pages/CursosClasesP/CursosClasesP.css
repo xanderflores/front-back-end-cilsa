@@ -3,14 +3,14 @@
     --secondary-color: #1eab67; /* Puedes agregar más colores aquí */
   }
   
-.container{
+.container-principal{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     /* Distribuye las tarjetas con espacio */
-    
     width: 100%;
-    height: 100%;
+    margin-top: 13vh;
+    height: auto;
 }
 
 h1 {

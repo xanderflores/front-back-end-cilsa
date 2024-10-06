@@ -3,7 +3,8 @@
     color: white;
     text-align: center;
     width: 100%;
-   
+    min-height: 77vh;
+    height: auto;
 }
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

@@ -7,7 +7,7 @@ import cursos from "../../Data/DataCursos"; // Importamos los datos de los curso
 
 function CursosClasesP() {
   return (
-    <div className="container">
+    <div className="container-principal">
      {cursos.map((curso) => (
         <Card style={{ width: '18rem', margin: '10px' }} key={curso.id}>
           <div className="d-flex justify-content-center align-items-center" style={{ height: '180px', backgroundColor: '#f8f9fa' }}>
