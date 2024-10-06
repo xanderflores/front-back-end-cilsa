@@ -1,18 +1,27 @@
 import "./CursosClasesP.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "../../assets/Principal/logo.jpg";
+import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import cursos from "../../Data/DataCursos"; // Importamos los datos de los cursos
 
 function CursosClasesP() {
   return (
-    <div className="contenedor" style={{ height: "74vh", overflow: "none" }}>
-      <h1 className="titulo">Cursos</h1>
-      <img src={logo} alt="Logo" />
-      <h3>Ingeniero en sistemas</h3>
-      <h3>Profesor de Full stack developer</h3>
-      <nav>
-        <a href="#">www.Maxflores.com</a>
-      </nav>
+    <div className="container">
+     {cursos.map((curso) => (
+        <Card style={{ width: '18rem', margin: '10px' }} key={curso.id}>
+          <div className="d-flex justify-content-center align-items-center" style={{ height: '180px', backgroundColor: '#f8f9fa' }}>
+            <FontAwesomeIcon icon={['fab', curso.icono]} size="6x" />
+          </div>
+          <Card.Body className="text-center">
+            <Card.Title>{curso.titulo}</Card.Title>
+            <Card.Text>{curso.descripcion}</Card.Text>
+            <a href={`/curso/${curso.id}`} className="btn btn-primary custom-button">
+              Ver Curso
+            </a>
+          </Card.Body>
+        </Card>
+      ))}
     </div>
   );
 }
