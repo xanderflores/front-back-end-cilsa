@@ -11,7 +11,20 @@
     width: 100%;
     margin-top: 13vh;
     height: auto;
+    text-align: center;
 }
+.caja {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo {
+  text-align: right;
+}
+
+
 
 h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -56,13 +69,13 @@ a {
     color: white; /* Color del texto */
     border: none; /* Sin borde */
     transition: background-color 0.3s; /* Efecto de transición */
-    
+   margin-bottom: 1vh !important;
+   width: 30vh;
   }
   .custom-button:hover {
     background-color: white !important; /* Color de fondo al hacer hover */
     color: var(--primary-color);
     font-weight: bold;
-   
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
   }
   
