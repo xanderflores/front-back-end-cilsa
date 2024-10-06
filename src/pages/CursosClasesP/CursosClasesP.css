@@ -1,23 +1,31 @@
-.contenedor{
-    background-color: #0D767C;
-    color: white;
-    text-align: center;
+:root {
+    --primary-color: #0b9bb4c7;
+    --secondary-color: #1eab67; /* Puedes agregar más colores aquí */
+  }
+  
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* Distribuye las tarjetas con espacio */
+    
     width: 100%;
-   
+    height: 100%;
 }
-h1{
+
+h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 
 }
 
-h3{
+h3 {
     font-family: Arial, Helvetica, sans-serif;
 
 
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,3 +33,50 @@ a{
 
 }
 
+.curso-card {
+    flex: 1 1 calc(33% - 40px);
+    /* Hace que ocupe un tercio del ancho menos el margen */
+    margin: 10px;
+    max-width: 300px;
+    /* Limita el tamaño máximo de cada tarjeta */
+    min-width: 250px;
+    /* Establece un tamaño mínimo para las tarjetas */
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales para el contenedor del ícono */
+.icon-container {
+    height: 180px;
+    background-color: #f8f9fa;
+}
+/*Estilos para los botones*/
+
+.custom-button {
+    background-color: var(--primary-color) !important; /* Color de fondo inicial */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Efecto de transición */
+    
+  }
+  .custom-button:hover {
+    background-color: white !important; /* Color de fondo al hacer hover */
+    color: var(--primary-color);
+    font-weight: bold;
+   
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  
+/*Para lo responsivo*/
+@media (max-width: 992px) {
+    .curso-card {
+        flex: 1 1 calc(50% - 40px);
+        /* Para pantallas medianas, ajusta a dos columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .curso-card {
+        flex: 1 1 calc(100% - 20px);
+        /* Para pantallas pequeñas, ajusta a una columna */
+    }
+}
