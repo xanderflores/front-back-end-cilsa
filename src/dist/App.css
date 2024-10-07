@@ -1,9 +1,6 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .App .bottom_co {
   font-size: 13px;

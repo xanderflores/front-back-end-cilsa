@@ -56,9 +56,16 @@ function Navigation() {
                     href="/BlogForo"
                     style={{ color: "white" }}
                   >
-                    BLOG&FORO
+                    BLOG
                   </Nav.Link>
                   
+                  <Nav.Link
+                    className="navItemsText"
+                    href="/Foro"
+                    style={{ color: "white" }}
+                  >
+                    FORO
+                  </Nav.Link>
                 </div>
                 <div className="col-4 col-lg-4 brand-icon d-flex justify-content-end align-items-center">
                   
