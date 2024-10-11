@@ -13,6 +13,8 @@ function Panel() {
     descripcion: "",
     icono: "",
   });
+  const [isEditMode, setIsEditMode] = useState(false); // Estado para identificar si estamos en modo edición
+  const [cursoActual, setCursoActual] = useState(null); // Estado para almacenar el curso que se está editando
 
   // Función para obtener los cursos desde el backend
   const obtenerCursos = async () => {
@@ -59,6 +61,35 @@ function Panel() {
     }
   };
 
+  const actualizarCurso = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`http://localhost:5000/cursos/${cursoActual.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nuevoCurso),
+      });
+      const data = await response.json();
+      setCursoData(
+        cursoData.map((curso) => (curso.id === data.id ? data : curso))
+      ); // Actualiza la lista de cursos con el curso editado
+      setShowModal(false); // Cerrar el modal
+      setIsEditMode(false); // Resetear modo edición
+      setNuevoCurso({ titulo: "", descripcion: "", icono: "" }); // Reiniciar el formulario
+    } catch (error) {
+      console.error("Error al actualizar el curso:", error);
+    }
+  };
+
+  const abrirModalEdicion = (curso) => {
+    setCursoActual(curso);
+    setNuevoCurso({ titulo: curso.titulo, descripcion: curso.descripcion, icono: curso.icono });
+    setIsEditMode(true);
+    setShowModal(true);
+  };
+
   return (
     <div className="container-principal">
       <div className="caja">
@@ -67,7 +98,11 @@ function Panel() {
         <Button
           variant="primary"
           className="custom-button"
-          onClick={() => setShowModal(true)}
+          onClick={() => {
+            setNuevoCurso({ titulo: "", descripcion: "", icono: "" }); // Reiniciar el formulario
+            setIsEditMode(false); // Asegurarse de que no esté en modo edición
+            setShowModal(true); // Mostrar modal
+          }}
         >
           Nuevo Curso
         </Button>
@@ -94,7 +129,13 @@ function Panel() {
               </td>
               <td>
                 <Button
-                  variant="danger"
+                  variant="outline-info"
+                  onClick={() => abrirModalEdicion(curso)}
+                >
+                  Editar
+                </Button>
+                <Button
+                  variant="outline-danger"
                   onClick={() => eliminarCurso(curso.id)}
                 >
                   Eliminar
@@ -105,13 +146,13 @@ function Panel() {
         </tbody>
       </table>
 
-      {/* Modal para crear un nuevo curso */}
+      {/* Modal para crear o editar un curso */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Nuevo Curso</Modal.Title>
+          <Modal.Title>{isEditMode ? "Editar Curso" : "Nuevo Curso"}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={crearCurso}>
+          <Form onSubmit={isEditMode ? actualizarCurso : crearCurso}>
             <Form.Group controlId=" formTitulo">
               <Form.Label>Título</Form.Label>
               <Form.Control
@@ -158,7 +199,7 @@ function Panel() {
               Ver iconos
             </a>
             <Button variant="primary custom-button" type="submit">
-              Crear Curso
+              {isEditMode ? "Guardar Cambios" : "Crear Curso"}
             </Button>
           </Form>
         </Modal.Body>
