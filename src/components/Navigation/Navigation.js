@@ -29,7 +29,7 @@ function Navigation() {
             <Nav className="my-custom-class w-100 ">
               <div className="row w-100">
                 <div className="col-8 col-lg-8 nav-dropDown d-flex justify-content-center align-items-center">
-
+                  
                   <Nav.Link
                     className="navItemsText"
                     href="/"
@@ -66,6 +66,14 @@ function Navigation() {
                   >
                     FORO
                   </Nav.Link>
+                  <Nav.Link
+                    className="navItemsText"
+                    href="/panel"
+                    style={{ color: "white" }}
+                  >
+                    PANEL
+                  </Nav.Link>
+                  
                 </div>
                 <div className="col-4 col-lg-4 brand-icon d-flex justify-content-end align-items-center">
                   
@@ -106,6 +114,7 @@ function Navigation() {
                         style={{ color: "#000" }}
                       />
                     </a>
+
                   </div>
                 </div>
               </div>
