@@ -1,16 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Navigation.scss";
-import { Container, Nav, Navbar} from "react-bootstrap";
+import { Container, Nav, Navbar, Modal, Button, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
+
 library.add(fab);
 
 function Navigation() {
- 
-  
+  const [showModal, setShowModal] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
+  // Funciones para abrir y cerrar el modal
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
+  // Función para manejar el inicio de sesión
+  const handleLogin = () => {
+    // Validación simple, puedes adaptarla
+    if (username === "admin" && password === "admin") {
+      handleClose(); // Cerrar el modal
+      window.location.href = "/Panel"; // Redirigir a /Panel si es correcto
+    } else {
+      alert("Usuario o contraseña incorrectos");
+    }
+  };
+  
   return (
     <>
       <Navbar
@@ -68,8 +85,8 @@ function Navigation() {
                   </Nav.Link>
                   <Nav.Link
                     className="navItemsText"
-                    href="/panel"
-                    style={{ color: "white" }}
+                    onClick={handleShow} // Al hacer clic, abre el modal
+                    style={{ color: "white", cursor: "pointer" }}
                   >
                     PANEL
                   </Nav.Link>
@@ -122,6 +139,42 @@ function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+       {/* Modal de inicio de sesión */}
+       <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>LOGIN - PANEL </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="formUsername">
+              <Form.Label>Usuario</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ingrese su usuario"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="formPassword">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Ingrese su contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button variant="primary custom-button" onClick={handleLogin}>
+            Iniciar Sesión
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
