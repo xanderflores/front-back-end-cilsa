@@ -1,9 +1,10 @@
+// DataCursos.js
 const cursos = [
   {
     id: 1,
     titulo: "Python",
     descripcion: "Aprende Python desde cero.",
-    icono: "python", 
+    icono: "python",
   },
   {
     id: 2,
@@ -27,13 +28,13 @@ const cursos = [
     id: 5,
     titulo: "C++",
     descripcion: "Aprende de este Framework Vue.",
-    icono: "vuejs", // Usando 'cpp' como representación, aunque no hay ícono específico en FontAwesome
+    icono: "vuejs",
   },
   {
     id: 6,
     titulo: "Angular",
     descripcion: "Desarrolla web con Angular.",
-    icono: "angular", // Usando 'gem' para representar Ruby
+    icono: "angular",
   },
   {
     id: 7,
@@ -45,14 +46,14 @@ const cursos = [
     id: 8,
     titulo: "C#",
     descripcion: "Curso de C# para aplicaciones de escritorio y web.",
-    icono: "microsoft", // No hay icono directo, pero se puede usar Microsoft para representar C#
+    icono: "microsoft",
   },
   {
     id: 9,
     titulo: "Go",
     descripcion: "Programación concurrente con Go.",
-    icono: "golang", // Usando un nombre representativo
+    icono: "golang",
   }
 ];
 
-export default cursos;
+module.exports = cursos; // Exportar usando CommonJS

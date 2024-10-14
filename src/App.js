@@ -7,6 +7,7 @@ import BlogForo from './pages/BlogForo/BlogForo';
 import Alumnos from './pages/Alumnos/Alumnos';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
+import Panel from './pages/Panel/Panel';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Alumnos" element={<Alumnos/>} />
           <Route path="/BlogForo" element={<BlogForo/>} />
           <Route path="/Foro" element={<Foro/>} />
+          <Route path='/Panel' element={<Panel/>}/>
         </Routes>
       </Router>
       <Footer/>
