@@ -76,13 +76,13 @@ function Navigation() {
                     BLOG
                   </Nav.Link>
                   
-                  <Nav.Link
+                  {/* <Nav.Link
                     className="navItemsText"
                     href="/Foro"
                     style={{ color: "white" }}
                   >
                     FORO
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link
                     className="navItemsText"
                     onClick={handleShow} // Al hacer clic, abre el modal

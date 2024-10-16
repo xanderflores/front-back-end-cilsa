@@ -7,17 +7,9 @@ function BlogForo() {
   return (
     <div className="contenedor" style={{ width: "100%", overflow: "none" }}>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+
       <h1 className="titulo">Blog</h1>
-      <img src={logo} alt="Logo" />
-      <h3>Ingeniero en sistemas</h3>
-      <h3>Profesor de Full stack developer</h3>
-      <nav>
-        <a href="#">www.Maxflores.com</a>
-      </nav>
-      <br></br>
+      
 
       <h2 >Atención Principiantes</h2>
 
